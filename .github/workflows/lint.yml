@@ -1,0 +1,2 @@
+# Goal: Whenever someone changes the python code, the linter will check if the syntax, format, indentation (Linting) is correct or not.
+
