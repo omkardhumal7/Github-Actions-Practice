@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v7
   # This step will install the linting tool
       - name: Install Linter
-        run: pip install riff
+        run: pip install ruff
   # This step will actually run the linter for the python code
-      - name: Check the code
+      - name: Check the files for linting  
         run: ruff check .
