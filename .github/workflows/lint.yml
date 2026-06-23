@@ -1,2 +1,19 @@
-# Goal: Whenever someone changes the python code, the linter will check if the syntax, format, indentation (Linting) is correct or not.
+# Goal: Whenever someone changes the python code, 
+#the linter will check if the syntax, format, indentation (Linting) is correct or not.
 
+name: Auto Linter
+
+on: 
+  push: 
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+  # this step will automatically clone the code of the current branch into the runner
+    steps:
+      - name: Checkout/Cloning the code
+        uses: actions/checkout@v7
+  # This step will install the linting tool
+      - name: Install Linter
+        run: pip install riff
