@@ -17,3 +17,6 @@ jobs:
   # This step will install the linting tool
       - name: Install Linter
         run: pip install riff
+  # This step will actually run the linter for the python code
+      - name: Check the code
+        run: ruff check .
